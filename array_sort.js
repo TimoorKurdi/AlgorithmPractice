@@ -16,3 +16,17 @@ for (var i = 0; i < arr.length; i++) {
 
 console.log(results);
 //[ 4, 9 ]
+
+// Algorithm to just get the highest and lowest numbers from an array
+
+Array.prototype.max = function () {
+    return Math.max.apply(Math, this);
+};
+
+Array.prototype.min = function () {
+    return Math.min.apply(Math, this);
+};
+
+var max = [10, 12, 18, 24, 15].max();
+var min = [10, 12, 18, 24, 15].min();
+console.log(("Max Number: " + max + " Min Number: " + min));
